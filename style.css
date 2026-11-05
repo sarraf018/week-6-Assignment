@@ -1,4 +1,6 @@
-
+/* ========================================
+   ROLEX-INSPIRED COLORS
+   ======================================== */
 
 :root {
     --green: #006039;
@@ -27,6 +29,7 @@ html {
 
 body {
     min-height: 100vh;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -73,6 +76,7 @@ body {
     color: var(--cream);
     text-decoration: none;
     font-size: 14px;
+
     transition: color 0.2s ease;
 }
 
@@ -89,6 +93,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: stretch;
+    flex-wrap: wrap;
     gap: 24px;
 
     width: 100%;
@@ -100,7 +105,7 @@ body {
    ======================================== */
 
 .business-card {
-    flex: 1 1 0;
+    flex: 1 1 320px;
     min-width: 0;
     max-width: 488px;
     padding: 28px;
@@ -179,10 +184,6 @@ p {
 .profile-image {
     display: block;
     margin: 20px auto 0;
-
-    /* Original fixed width example:
-    width: 1000px;
-    */
 
     max-width: 100%;
     width: 250px;
@@ -286,6 +287,7 @@ hr {
     font-size: 14px;
     font-weight: bold;
     cursor: pointer;
+
     transition: background-color 0.2s ease;
 }
 
@@ -315,6 +317,7 @@ footer p {
    ======================================== */
 
 @media (max-width: 700px) {
+
     body {
         padding: 18px 12px;
         gap: 18px;
@@ -342,6 +345,7 @@ footer p {
 }
 
 @media (max-width: 400px) {
+
     .navigation {
         gap: 4px;
         padding: 10px 5px;
