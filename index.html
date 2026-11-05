@@ -1,25 +1,28 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Online Business Card</title>
+    <title>Online Business Card | Sumit Sarraf</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+    <!-- Week 07 - Step 1: Navigation Menu -->
     <nav class="navigation">
         <a href="#profile-name">Home</a>
         <a href="#contact">Contact</a>
         <a href="#about-name">About</a>
     </nav>
 
+    <!-- Week 07 - Step 2: Flexbox Content Wrapper -->
     <main class="content-wrapper">
 
+        <!-- Card 1: Personal Business Card -->
         <section class="business-card">
 
             <div class="profile">
@@ -33,6 +36,7 @@
 
                 <p class="location">Seoul, Korea</p>
 
+                <!-- Week 07 - Step 3: Profile Image -->
                 <img
                     class="profile-image"
                     src="profile.jpg"
@@ -41,13 +45,16 @@
             </div>
 
             <hr>
-            
+
+            <!-- Contact Form -->
             <div class="contact" id="contact">
+
                 <h2>Get in Touch</h2>
 
                 <form class="contact-form">
 
                     <div class="name-fields">
+
                         <input
                             type="text"
                             name="firstName"
@@ -63,6 +70,7 @@
                             aria-label="Last Name"
                             required
                         >
+
                     </div>
 
                     <input
@@ -76,6 +84,7 @@
                     <button type="submit">Send Message</button>
 
                 </form>
+
             </div>
 
             <footer>
@@ -88,6 +97,7 @@
         <section class="business-card second-card" id="about">
 
             <div class="profile">
+
                 <p class="label">ABOUT ME</p>
 
                 <h2 id="about-name">Sumit Sarraf</h2>
@@ -97,11 +107,13 @@
                 </p>
 
                 <p class="location">Seoul, Korea</p>
+
             </div>
 
             <hr>
 
             <div class="contact">
+
                 <h2>My Goals</h2>
 
                 <p class="card-info">
@@ -109,6 +121,7 @@
                     and develop responsive websites using
                     HTML and CSS.
                 </p>
+
             </div>
 
             <footer>
@@ -118,6 +131,9 @@
         </section>
 
     </main>
+
+    <!-- Week 10: Connect JavaScript -->
+    <script src="script.js"></script>
 
 </body>
 </html>
