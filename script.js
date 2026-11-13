@@ -1,3 +1,4 @@
+
 // ========================================
 // WEEK 10: JS BASICS & CONTROL FLOW
 // Student: Sumit Sarraf
@@ -55,5 +56,23 @@ if (age >= 18) {
 } else {
 
     console.log("You are a minor.");
+
+}
+
+
+// ========================================
+// WEEK 11: DOM & DYNAMIC EVENT HANDLING
+// DARK MODE TOGGLE
+// ========================================
+
+let themeButton = document.querySelector("#theme-toggle");
+
+if (themeButton) {
+
+    themeButton.addEventListener("click", function() {
+
+        document.body.classList.toggle("dark-mode");
+
+    });
 
 }
