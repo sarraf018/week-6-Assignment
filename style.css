@@ -1,3 +1,4 @@
+
 /* ========================================
    ROLEX-INSPIRED COLORS
    ======================================== */
@@ -47,6 +48,8 @@ body {
 
     font-family: Georgia, "Times New Roman", serif;
     color: var(--cream);
+
+    transition: background 0.3s ease;
 }
 
 /* ========================================
@@ -178,7 +181,7 @@ p {
 
 /* ========================================
    WEEK 07 - STEP 3
-   IMAGE OVERFLOW FIX
+   PROFILE IMAGE
    ======================================== */
 
 .profile-image {
@@ -313,6 +316,81 @@ footer p {
 }
 
 /* ========================================
+   WEEK 11: DARK MODE TOGGLE BUTTON
+   ======================================== */
+
+#theme-toggle {
+    padding: 10px 16px;
+
+    background-color: var(--gold);
+    color: var(--deep-green);
+
+    border: 1px solid var(--gold);
+    border-radius: 5px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 13px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#theme-toggle:hover {
+    background-color: var(--cream);
+    color: var(--deep-green);
+}
+
+/* ========================================
+   WEEK 11: DARK MODE
+   ======================================== */
+
+body.dark-mode {
+    background: #080D0A;
+}
+
+body.dark-mode .navigation {
+    background-color: #101A14;
+}
+
+body.dark-mode .business-card {
+    background-color: #101A14;
+    border-color: #66551F;
+    border-top-color: var(--gold);
+}
+
+body.dark-mode .business-card.second-card {
+    background-color: #142019;
+}
+
+body.dark-mode #profile-name,
+body.dark-mode #about-name {
+    color: #FFFFFF;
+}
+
+body.dark-mode .card-info {
+    color: #D0D0D0;
+}
+
+body.dark-mode .location {
+    color: var(--gold);
+}
+
+body.dark-mode .contact-form {
+    background-color: #080D0A;
+    border-color: #66551F;
+}
+
+body.dark-mode .contact-form input {
+    background-color: #142019;
+    color: #FFFFFF;
+}
+
+body.dark-mode footer {
+    color: #B8B8B8;
+}
+
+/* ========================================
    MOBILE RESPONSIVE LAYOUT
    ======================================== */
 
@@ -354,6 +432,10 @@ footer p {
     .navigation a {
         padding: 8px 10px;
         font-size: 13px;
+    }
+
+    #theme-toggle {
+        width: 100%;
     }
 
     .business-card {
