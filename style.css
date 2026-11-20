@@ -1,7 +1,7 @@
 
 /* ========================================
    ROLEX-INSPIRED COLORS
-   ======================================== */
+======================================== */
 
 :root {
     --green: #006039;
@@ -14,9 +14,10 @@
     --border: rgba(201, 162, 39, 0.45);
 }
 
+
 /* ========================================
    BASIC STYLING
-   ======================================== */
+======================================== */
 
 * {
     box-sizing: border-box;
@@ -30,21 +31,17 @@ html {
 
 body {
     min-height: 100vh;
-
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     gap: 24px;
-
     padding: 28px 20px;
 
-    background:
-        radial-gradient(
-            circle at top,
-            #07583A 0%,
-            var(--deep-green) 65%
-        );
+    background: radial-gradient(
+        circle at top,
+        #07583A 0%,
+        var(--deep-green) 65%
+    );
 
     font-family: Georgia, "Times New Roman", serif;
     color: var(--cream);
@@ -52,10 +49,10 @@ body {
     transition: background 0.3s ease;
 }
 
+
 /* ========================================
-   WEEK 07 - STEP 1
-   NAVIGATION MENU
-   ======================================== */
+   NAVIGATION
+======================================== */
 
 .navigation {
     display: flex;
@@ -74,12 +71,10 @@ body {
 }
 
 .navigation a {
-    padding: 9px 16px;
-
+    padding: 9px 12px;
     color: var(--cream);
     text-decoration: none;
     font-size: 14px;
-
     transition: color 0.2s ease;
 }
 
@@ -87,10 +82,10 @@ body {
     color: var(--gold);
 }
 
+
 /* ========================================
-   WEEK 07 - STEP 2
-   HORIZONTAL CARD LAYOUT
-   ======================================== */
+   MAIN LAYOUT
+======================================== */
 
 .content-wrapper {
     display: flex;
@@ -103,9 +98,10 @@ body {
     max-width: 1000px;
 }
 
+
 /* ========================================
    BUSINESS CARDS
-   ======================================== */
+======================================== */
 
 .business-card {
     flex: 1 1 320px;
@@ -125,9 +121,10 @@ body {
     background-color: #004D32;
 }
 
+
 /* ========================================
-   PROFILE INFORMATION
-   ======================================== */
+   PROFILE
+======================================== */
 
 .profile {
     text-align: center;
@@ -135,32 +132,22 @@ body {
 
 .label {
     margin-bottom: 16px;
-
     color: var(--gold);
     font-size: 11px;
     font-weight: bold;
     letter-spacing: 3px;
 }
 
-h1,
-p {
-    margin-bottom: 20px;
-}
-
 #profile-name {
     margin-bottom: 12px;
-
     color: var(--cream);
-    font-family: Georgia, "Times New Roman", serif;
     font-size: 34px;
     font-weight: 500;
-    letter-spacing: 0.5px;
     overflow-wrap: anywhere;
 }
 
 #about-name {
     margin-bottom: 12px;
-
     color: var(--cream);
     font-size: 29px;
     font-weight: 500;
@@ -169,8 +156,9 @@ p {
 
 .card-info {
     color: var(--muted);
-    font-size: 16px;
-    line-height: 1.7;
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 16px;
 }
 
 .location {
@@ -179,60 +167,55 @@ p {
     font-size: 14px;
 }
 
+
 /* ========================================
-   WEEK 07 - STEP 3
    PROFILE IMAGE
-   ======================================== */
+======================================== */
 
 .profile-image {
     display: block;
-    margin: 20px auto 0;
-
-    max-width: 100%;
     width: 250px;
-    height: auto;
+    height: 280px;
+    max-width: 100%;
+    object-fit: cover;
+    object-position: center;
+
+    margin: 20px auto 0;
 
     border: 2px solid var(--gold);
     border-radius: 6px;
 }
 
-/* Keep images responsive */
-
-img {
-    max-width: 100%;
-    height: auto;
-}
 
 /* ========================================
    DIVIDER
-   ======================================== */
+======================================== */
 
 hr {
     margin: 28px 0;
-
     border: none;
     border-top: 1px solid var(--gold);
 }
 
+
 /* ========================================
-   CONTACT SECTION
-   ======================================== */
+   CONTACT FORM
+======================================== */
 
-.contact h2 {
+.contact h2,
+.about-section h2,
+.hobbies-section h2,
+.gallery-section h2 {
     margin-bottom: 18px;
-
     color: var(--gold);
     font-size: 21px;
     font-weight: 500;
 }
 
-/* Contact Form */
-
 .contact-form {
     display: flex;
     flex-direction: column;
     gap: 12px;
-
     padding: 20px;
 
     background-color: var(--dark-green);
@@ -240,15 +223,11 @@ hr {
     border-radius: 6px;
 }
 
-/* First and Last Name */
-
 .name-fields {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 12px;
 }
-
-/* Input Fields */
 
 .contact-form input {
     width: 100%;
@@ -273,8 +252,6 @@ hr {
     border-color: var(--gold);
 }
 
-/* Send Message Button */
-
 .contact-form button {
     width: 100%;
     padding: 13px;
@@ -298,13 +275,152 @@ hr {
     background-color: var(--cream);
 }
 
+
+/* ========================================
+   ABOUT SECTION
+======================================== */
+
+.about-section {
+    margin-top: 25px;
+}
+
+.about-section p {
+    text-align: left;
+}
+
+
+/* ========================================
+   WEEK 12: HOBBIES
+======================================== */
+
+.hobbies-section {
+    margin-top: 30px;
+    padding-top: 25px;
+    border-top: 1px solid var(--gold);
+}
+
+.hobbies-section > .label,
+.gallery-section > .label {
+    text-align: center;
+}
+
+.hobbies-section h2,
+.gallery-section h2 {
+    text-align: center;
+}
+
+.section-description {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.7;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#hobby-list {
+    margin-top: 22px;
+}
+
+#hobby-list ul {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+
+    list-style: none;
+}
+
+#hobby-list li {
+    padding: 14px 10px;
+
+    background-color: var(--dark-green);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+
+    color: var(--cream);
+    font-size: 14px;
+    text-align: center;
+    line-height: 1.5;
+
+    transition: background-color 0.2s ease;
+}
+
+#hobby-list li:hover {
+    background-color: var(--deep-green);
+}
+
+
+/* ========================================
+   WEEK 12: PHOTO GALLERY
+======================================== */
+
+.gallery-section {
+    width: 100%;
+    margin-top: 30px;
+    padding-top: 25px;
+    border-top: 1px solid var(--gold);
+    text-align: center;
+}
+
+.gallery-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+}
+
+#gallery-image {
+    display: block;
+    width: 100%;
+    height: 320px;
+
+    object-fit: contain;
+    object-position: center;
+
+    padding: 5px;
+
+    background-color: var(--deep-green);
+    border: 1px solid var(--gold);
+    border-radius: 7px;
+}
+
+#photo-counter {
+    margin: 0;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+#next-photo {
+    padding: 12px 25px;
+
+    background-color: var(--gold);
+    color: var(--deep-green);
+
+    border: 1px solid var(--gold);
+    border-radius: 5px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 14px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#next-photo:hover {
+    background-color: var(--cream);
+}
+
+
 /* ========================================
    FOOTER
-   ======================================== */
+======================================== */
 
 footer {
     margin-top: 24px;
-
     text-align: center;
     color: #D0C9B7;
     font-size: 11px;
@@ -315,9 +431,10 @@ footer p {
     margin-bottom: 0;
 }
 
+
 /* ========================================
-   WEEK 11: DARK MODE TOGGLE BUTTON
-   ======================================== */
+   WEEK 11: DARK MODE BUTTON
+======================================== */
 
 #theme-toggle {
     padding: 10px 16px;
@@ -338,12 +455,12 @@ footer p {
 
 #theme-toggle:hover {
     background-color: var(--cream);
-    color: var(--deep-green);
 }
+
 
 /* ========================================
    WEEK 11: DARK MODE
-   ======================================== */
+======================================== */
 
 body.dark-mode {
     background: #080D0A;
@@ -365,15 +482,12 @@ body.dark-mode .business-card.second-card {
 
 body.dark-mode #profile-name,
 body.dark-mode #about-name {
-    color: #FFFFFF;
+    color: var(--white);
 }
 
-body.dark-mode .card-info {
+body.dark-mode .card-info,
+body.dark-mode .section-description {
     color: #D0D0D0;
-}
-
-body.dark-mode .location {
-    color: var(--gold);
 }
 
 body.dark-mode .contact-form {
@@ -383,16 +497,26 @@ body.dark-mode .contact-form {
 
 body.dark-mode .contact-form input {
     background-color: #142019;
-    color: #FFFFFF;
+    color: var(--white);
+}
+
+body.dark-mode #hobby-list li {
+    background-color: #080D0A;
+    color: var(--cream);
+}
+
+body.dark-mode #gallery-image {
+    background-color: #080D0A;
 }
 
 body.dark-mode footer {
     color: #B8B8B8;
 }
 
+
 /* ========================================
-   MOBILE RESPONSIVE LAYOUT
-   ======================================== */
+   RESPONSIVE DESIGN
+======================================== */
 
 @media (max-width: 700px) {
 
@@ -420,7 +544,13 @@ body.dark-mode footer {
     #about-name {
         font-size: 26px;
     }
+
+    #gallery-image {
+        height: 300px;
+    }
+
 }
+
 
 @media (max-width: 400px) {
 
@@ -449,4 +579,13 @@ body.dark-mode footer {
     .contact-form {
         padding: 14px;
     }
+
+    #hobby-list ul {
+        grid-template-columns: 1fr;
+    }
+
+    #gallery-image {
+        height: 260px;
+    }
+
 }
