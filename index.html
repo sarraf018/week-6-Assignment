@@ -13,24 +13,27 @@
 
 <body>
 
-    <!-- Week 07 - Step 1: Navigation Menu -->
+    <!-- WEEK 07: NAVIGATION -->
     <nav class="navigation">
 
         <a href="#profile-name">Home</a>
         <a href="#contact">Contact</a>
         <a href="#about-name">About</a>
+        <a href="#hobbies">Hobbies</a>
+        <a href="#gallery">Gallery</a>
 
-        <!-- Week 11: Dark Mode Toggle -->
+        <!-- WEEK 11: DARK MODE -->
         <button id="theme-toggle" type="button">
             Toggle Dark Mode
         </button>
 
     </nav>
 
-    <!-- Week 07 - Step 2: Flexbox Content Wrapper -->
+
+    <!-- MAIN CONTENT -->
     <main class="content-wrapper">
 
-        <!-- Card 1: Personal Business Card -->
+        <!-- PERSONAL BUSINESS CARD -->
         <section class="business-card">
 
             <div class="profile">
@@ -43,9 +46,8 @@
                     Software Engineering Student
                 </p>
 
-                <p class="location">Seoul, Korea</p>
+                <p class="location">Seoul, South Korea</p>
 
-                <!-- Week 07 - Step 3: Profile Image -->
                 <img
                     class="profile-image"
                     src="profile.jpg"
@@ -56,7 +58,7 @@
 
             <hr>
 
-            <!-- Contact Form -->
+            <!-- CONTACT FORM -->
             <div class="contact" id="contact">
 
                 <h2>Get in Touch</h2>
@@ -91,7 +93,9 @@
                         required
                     >
 
-                    <button type="submit">Send Message</button>
+                    <button type="submit">
+                        Send Message
+                    </button>
 
                 </form>
 
@@ -103,8 +107,9 @@
 
         </section>
 
-        <!-- Card 2: About Me -->
-        <section class="business-card second-card" id="about">
+
+        <!-- ABOUT ME CARD -->
+        <section class="business-card second-card">
 
             <div class="profile">
 
@@ -116,23 +121,76 @@
                     Software Engineering Student
                 </p>
 
-                <p class="location">Seoul, Korea</p>
+                <p class="location">Seoul, South Korea</p>
 
             </div>
 
             <hr>
 
-            <div class="contact">
+            <!-- SHORT ABOUT DESCRIPTION -->
+            <div class="about-section">
 
-                <h2>My Goals</h2>
+                <h2>About Me</h2>
 
                 <p class="card-info">
-                    Improve my software engineering skills
-                    and develop responsive websites using
-                    HTML and CSS.
+                    I am a Software Engineering student interested
+                    in programming, technology, web development,
+                    and learning new skills. I enjoy exploring
+                    creative ideas and discovering how technology
+                    can solve everyday problems.
                 </p>
 
             </div>
+
+
+            <!-- WEEK 12: HOBBIES -->
+            <div class="hobbies-section" id="hobbies">
+
+                <p class="label">WEEK 12 • ARRAYS AND LOOPS</p>
+
+                <h2>My Hobbies</h2>
+
+                <p class="section-description">
+                    Some activities I enjoy in my free time.
+                </p>
+
+                <!-- JavaScript creates the list -->
+                <div id="hobby-list"></div>
+
+            </div>
+
+
+            <!-- OPTIONAL: PHOTO GALLERY -->
+            <div class="gallery-section" id="gallery">
+
+                <p class="label">PHOTO COLLECTION</p>
+
+                <h2>My Gallery</h2>
+
+                <p class="section-description">
+                    A collection of sample photographs.
+                </p>
+
+                <div class="gallery-container">
+
+                    <img
+                        id="gallery-image"
+                        src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=1000"
+                        alt="Gallery photo 1"
+                    >
+
+                    <p id="photo-counter">
+                        Photo 1 of 5
+                    </p>
+
+                    <button id="next-photo" type="button">
+                        Next Photo →
+                    </button>
+
+                </div>
+
+            </div>
+
 
             <footer>
                 <p>Learning • Creating • Growing</p>
@@ -142,8 +200,10 @@
 
     </main>
 
-    <!-- Week 10 and Week 11 JavaScript -->
+
+    <!-- JAVASCRIPT -->
     <script src="script.js"></script>
 
 </body>
+
 </html>
