@@ -1,6 +1,6 @@
 
 /* ========================================
-   ROLEX-INSPIRED COLORS
+   ROLEX-INSPIRED COLOR PALETTE
 ======================================== */
 
 :root {
@@ -16,7 +16,7 @@
 
 
 /* ========================================
-   BASIC STYLING
+   GENERAL RESET
 ======================================== */
 
 * {
@@ -31,10 +31,12 @@ html {
 
 body {
     min-height: 100vh;
+
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 24px;
+
     padding: 28px 20px;
 
     background: radial-gradient(
@@ -46,7 +48,12 @@ body {
     font-family: Georgia, "Times New Roman", serif;
     color: var(--cream);
 
-    transition: background 0.3s ease;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+button,
+input {
+    font: inherit;
 }
 
 
@@ -63,6 +70,7 @@ body {
 
     width: 100%;
     max-width: 1000px;
+
     padding: 14px 18px;
 
     background-color: var(--dark-green);
@@ -72,9 +80,11 @@ body {
 
 .navigation a {
     padding: 9px 12px;
+
     color: var(--cream);
     text-decoration: none;
     font-size: 14px;
+
     transition: color 0.2s ease;
 }
 
@@ -84,7 +94,7 @@ body {
 
 
 /* ========================================
-   MAIN LAYOUT
+   MAIN CONTENT
 ======================================== */
 
 .content-wrapper {
@@ -105,11 +115,14 @@ body {
 
 .business-card {
     flex: 1 1 320px;
+
     min-width: 0;
     max-width: 488px;
+
     padding: 28px;
 
     background-color: var(--green);
+
     border: 1px solid var(--border);
     border-top: 3px solid var(--gold);
     border-radius: 8px;
@@ -132,7 +145,9 @@ body {
 
 .label {
     margin-bottom: 16px;
+
     color: var(--gold);
+
     font-size: 11px;
     font-weight: bold;
     letter-spacing: 3px;
@@ -140,29 +155,38 @@ body {
 
 #profile-name {
     margin-bottom: 12px;
+
     color: var(--cream);
+
     font-size: 34px;
     font-weight: 500;
+
     overflow-wrap: anywhere;
 }
 
 #about-name {
     margin-bottom: 12px;
+
     color: var(--cream);
+
     font-size: 29px;
     font-weight: 500;
+
     overflow-wrap: anywhere;
 }
 
 .card-info {
+    margin-bottom: 16px;
+
     color: var(--muted);
+
     font-size: 15px;
     line-height: 1.8;
-    margin-bottom: 16px;
 }
 
 .location {
     margin-top: 4px;
+
     color: var(--gold);
     font-size: 14px;
 }
@@ -174,9 +198,11 @@ body {
 
 .profile-image {
     display: block;
+
     width: 250px;
-    height: 280px;
     max-width: 100%;
+    height: 280px;
+
     object-fit: cover;
     object-position: center;
 
@@ -186,6 +212,10 @@ body {
     border-radius: 6px;
 }
 
+img {
+    max-width: 100%;
+}
+
 
 /* ========================================
    DIVIDER
@@ -193,13 +223,14 @@ body {
 
 hr {
     margin: 28px 0;
+
     border: none;
     border-top: 1px solid var(--gold);
 }
 
 
 /* ========================================
-   CONTACT FORM
+   SECTION HEADINGS
 ======================================== */
 
 .contact h2,
@@ -207,18 +238,27 @@ hr {
 .hobbies-section h2,
 .gallery-section h2 {
     margin-bottom: 18px;
+
     color: var(--gold);
+
     font-size: 21px;
     font-weight: 500;
 }
+
+
+/* ========================================
+   CONTACT FORM
+======================================== */
 
 .contact-form {
     display: flex;
     flex-direction: column;
     gap: 12px;
+
     padding: 20px;
 
     background-color: var(--dark-green);
+
     border: 1px solid var(--border);
     border-radius: 6px;
 }
@@ -232,9 +272,11 @@ hr {
 .contact-form input {
     width: 100%;
     min-width: 0;
+
     padding: 13px 14px;
 
     background-color: #003D26;
+
     border: 1px solid #557C69;
     border-radius: 4px;
     outline: none;
@@ -254,25 +296,33 @@ hr {
 
 .contact-form button {
     width: 100%;
+
     padding: 13px;
     margin-top: 4px;
-
-    border: 1px solid var(--gold);
-    border-radius: 4px;
 
     background-color: var(--gold);
     color: #173B2B;
 
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 14px;
+    border: 1px solid var(--gold);
+    border-radius: 4px;
+
     font-weight: bold;
+    font-size: 14px;
+
     cursor: pointer;
 
-    transition: background-color 0.2s ease;
+    transition: 0.3s ease;
 }
 
 .contact-form button:hover {
     background-color: var(--cream);
+}
+
+#form-message {
+    color: var(--gold);
+    font-size: 13px;
+    text-align: center;
+    line-height: 1.6;
 }
 
 
@@ -296,6 +346,7 @@ hr {
 .hobbies-section {
     margin-top: 30px;
     padding-top: 25px;
+
     border-top: 1px solid var(--gold);
 }
 
@@ -310,11 +361,13 @@ hr {
 }
 
 .section-description {
+    margin-bottom: 20px;
+
     color: var(--muted);
+
     font-size: 14px;
     line-height: 1.7;
     text-align: center;
-    margin-bottom: 20px;
 }
 
 #hobby-list {
@@ -333,19 +386,22 @@ hr {
     padding: 14px 10px;
 
     background-color: var(--dark-green);
+
     border: 1px solid var(--border);
     border-radius: 6px;
 
     color: var(--cream);
+
     font-size: 14px;
     text-align: center;
     line-height: 1.5;
 
-    transition: background-color 0.2s ease;
+    transition: 0.2s ease;
 }
 
 #hobby-list li:hover {
     background-color: var(--deep-green);
+    transform: translateY(-3px);
 }
 
 
@@ -355,9 +411,12 @@ hr {
 
 .gallery-section {
     width: 100%;
+
     margin-top: 30px;
     padding-top: 25px;
+
     border-top: 1px solid var(--gold);
+
     text-align: center;
 }
 
@@ -369,27 +428,37 @@ hr {
 
     width: 100%;
     max-width: 420px;
+
     margin: 0 auto;
 }
 
 #gallery-image {
     display: block;
-    width: 100%;
-    height: 320px;
 
-    object-fit: contain;
+    width: 100%;
+    height: 300px;
+
+    object-fit: cover;
     object-position: center;
 
-    padding: 5px;
-
     background-color: var(--deep-green);
+
     border: 1px solid var(--gold);
     border-radius: 7px;
+
+    transition: opacity 0.2s ease;
+}
+
+#photo-description {
+    color: var(--muted);
+
+    font-size: 14px;
+    line-height: 1.6;
 }
 
 #photo-counter {
-    margin: 0;
-    color: var(--muted);
+    color: var(--gold);
+
     font-size: 13px;
 }
 
@@ -402,16 +471,17 @@ hr {
     border: 1px solid var(--gold);
     border-radius: 5px;
 
-    font-family: Georgia, "Times New Roman", serif;
     font-size: 14px;
     font-weight: bold;
 
     cursor: pointer;
+
     transition: 0.3s ease;
 }
 
 #next-photo:hover {
     background-color: var(--cream);
+    transform: translateY(-2px);
 }
 
 
@@ -421,10 +491,12 @@ hr {
 
 footer {
     margin-top: 24px;
-    text-align: center;
+
     color: #D0C9B7;
+
     font-size: 11px;
     line-height: 1.6;
+    text-align: center;
 }
 
 footer p {
@@ -445,11 +517,11 @@ footer p {
     border: 1px solid var(--gold);
     border-radius: 5px;
 
-    font-family: Georgia, "Times New Roman", serif;
     font-size: 13px;
     font-weight: bold;
 
     cursor: pointer;
+
     transition: 0.3s ease;
 }
 
@@ -464,14 +536,20 @@ footer p {
 
 body.dark-mode {
     background: #080D0A;
+    color: var(--cream);
 }
 
 body.dark-mode .navigation {
     background-color: #101A14;
 }
 
+body.dark-mode .navigation a {
+    color: var(--cream);
+}
+
 body.dark-mode .business-card {
     background-color: #101A14;
+
     border-color: #66551F;
     border-top-color: var(--gold);
 }
@@ -500,6 +578,10 @@ body.dark-mode .contact-form input {
     color: var(--white);
 }
 
+body.dark-mode .contact-form input::placeholder {
+    color: #B9B9AC;
+}
+
 body.dark-mode #hobby-list li {
     background-color: #080D0A;
     color: var(--cream);
@@ -515,7 +597,7 @@ body.dark-mode footer {
 
 
 /* ========================================
-   RESPONSIVE DESIGN
+   RESPONSIVE DESIGN: TABLETS
 ======================================== */
 
 @media (max-width: 700px) {
@@ -532,7 +614,8 @@ body.dark-mode footer {
 
     .business-card {
         width: 100%;
-        max-width: 480px;
+        max-width: 488px;
+
         flex: 1 1 auto;
         padding: 22px;
     }
@@ -546,13 +629,21 @@ body.dark-mode footer {
     }
 
     #gallery-image {
-        height: 300px;
+        height: 280px;
     }
 
 }
 
 
+/* ========================================
+   RESPONSIVE DESIGN: MOBILE
+======================================== */
+
 @media (max-width: 400px) {
+
+    body {
+        padding: 14px 10px;
+    }
 
     .navigation {
         gap: 4px;
@@ -572,6 +663,14 @@ body.dark-mode footer {
         padding: 16px;
     }
 
+    #profile-name {
+        font-size: 27px;
+    }
+
+    #about-name {
+        font-size: 24px;
+    }
+
     .name-fields {
         grid-template-columns: 1fr;
     }
@@ -585,7 +684,7 @@ body.dark-mode footer {
     }
 
     #gallery-image {
-        height: 260px;
+        height: 240px;
     }
 
 }
