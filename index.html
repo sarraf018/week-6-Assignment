@@ -6,6 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <meta name="description" content="Sumit Sarraf's personal online business card and portfolio.">
+
     <title>Online Business Card | Sumit Sarraf</title>
 
     <link rel="stylesheet" href="style.css">
@@ -30,7 +32,6 @@
     </nav>
 
 
-    <!-- MAIN CONTENT -->
     <main class="content-wrapper">
 
         <!-- PERSONAL BUSINESS CARD -->
@@ -61,9 +62,11 @@
             <!-- CONTACT FORM -->
             <div class="contact" id="contact">
 
+                <p class="label">LET'S CONNECT</p>
+
                 <h2>Get in Touch</h2>
 
-                <form class="contact-form">
+                <form class="contact-form" id="contact-form">
 
                     <div class="name-fields">
 
@@ -97,6 +100,8 @@
                         Send Message
                     </button>
 
+                    <p id="form-message" aria-live="polite"></p>
+
                 </form>
 
             </div>
@@ -127,7 +132,8 @@
 
             <hr>
 
-            <!-- SHORT ABOUT DESCRIPTION -->
+
+            <!-- ABOUT SECTION -->
             <div class="about-section">
 
                 <h2>About Me</h2>
@@ -138,6 +144,13 @@
                     and learning new skills. I enjoy exploring
                     creative ideas and discovering how technology
                     can solve everyday problems.
+                </p>
+
+                <p class="card-info">
+                    My goal is to become a skilled software engineer,
+                    build meaningful digital experiences, and
+                    connect with people around the world through
+                    creativity, technology, and continuous learning.
                 </p>
 
             </div>
@@ -151,24 +164,26 @@
                 <h2>My Hobbies</h2>
 
                 <p class="section-description">
-                    Some activities I enjoy in my free time.
+                    Activities I enjoy while learning, exploring,
+                    and improving myself.
                 </p>
 
-                <!-- JavaScript creates the list -->
+                <!-- JavaScript generates the hobby list -->
                 <div id="hobby-list"></div>
 
             </div>
 
 
-            <!-- OPTIONAL: PHOTO GALLERY -->
+            <!-- WEEK 12: FIVE-PHOTO GALLERY -->
             <div class="gallery-section" id="gallery">
 
-                <p class="label">PHOTO COLLECTION</p>
+                <p class="label">MY PHOTO COLLECTION</p>
 
                 <h2>My Gallery</h2>
 
                 <p class="section-description">
-                    A collection of sample photographs.
+                    A collection of beautiful places, experiences,
+                    and memorable moments.
                 </p>
 
                 <div class="gallery-container">
@@ -178,6 +193,10 @@
                         src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=1000"
                         alt="Gallery photo 1"
                     >
+
+                    <p id="photo-description">
+                        Exploring beautiful landscapes.
+                    </p>
 
                     <p id="photo-counter">
                         Photo 1 of 5
