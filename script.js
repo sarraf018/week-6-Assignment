@@ -5,11 +5,19 @@
 ======================================== */
 
 
-/* PART 1: TIME-BASED GREETING */
+/* ========================================
+   PART 1: TIME-BASED GREETING
+======================================== */
 
 let userName = prompt("What is your name?");
 
 let currentHour = new Date().getHours();
+
+if (userName === null || userName.trim() === "") {
+
+    userName = "Guest";
+
+}
 
 if (currentHour < 12) {
 
@@ -26,7 +34,9 @@ if (currentHour < 12) {
 }
 
 
-/* PART 2: AGE AND DAYS LIVED */
+/* ========================================
+   PART 2: AGE AND DAYS LIVED
+======================================== */
 
 let birthYear = Number(prompt("What year were you born?"));
 
@@ -43,7 +53,8 @@ if (
 ) {
 
     console.log(
-        "You have lived for approximately " + daysLived + " days!"
+        "You have lived for approximately " +
+        daysLived + " days!"
     );
 
     if (age >= 18) {
@@ -98,11 +109,13 @@ if (themeButton) {
 // Step 1: Create an array of hobbies
 
 const hobbies = [
+
     "Photography",
     "Playing Football",
     "Traveling",
     "Exploring Technology",
     "Creating Digital Content"
+
 ];
 
 
@@ -139,11 +152,10 @@ if (listContainer) {
 
 
 /* ========================================
-   WEEK 12: FIVE-PHOTO GALLERY
-   OPTIONAL EXTENSION
+   WEEK 12: FIVE-PHOTO IMAGE GALLERY
 ======================================== */
 
-// Step 1: Create an array containing five image URLs
+// Step 1: Create an array containing five images
 
 const images = [
 
@@ -160,12 +172,29 @@ const images = [
 ];
 
 
-// Step 2: Start with the first image
+// Step 2: Create descriptions for each photo
+
+const photoDescriptions = [
+
+    "Exploring beautiful mountain landscapes.",
+
+    "Enjoying nature and peaceful surroundings.",
+
+    "Discovering beautiful morning views.",
+
+    "Appreciating the beauty of green forests.",
+
+    "Creating memories through travel and photography."
+
+];
+
+
+// Step 3: Start with the first image
 
 let currentIndex = 0;
 
 
-// Step 3: Find the gallery elements
+// Step 4: Find the gallery HTML elements
 
 const galleryImage = document.getElementById("gallery-image");
 
@@ -173,12 +202,19 @@ const nextButton = document.getElementById("next-photo");
 
 const photoCounter = document.getElementById("photo-counter");
 
+const photoDescription = document.getElementById("photo-description");
 
-// Step 4: Check that the gallery elements exist
 
-if (galleryImage && nextButton && photoCounter) {
+// Step 5: Check that the gallery elements exist
 
-    // Function to display the selected image
+if (
+    galleryImage &&
+    nextButton &&
+    photoCounter &&
+    photoDescription
+) {
+
+    // Function to display the selected photo
 
     function showPhoto() {
 
@@ -191,10 +227,13 @@ if (galleryImage && nextButton && photoCounter) {
             "Photo " + (currentIndex + 1) +
             " of " + images.length;
 
+        photoDescription.textContent =
+            photoDescriptions[currentIndex];
+
     }
 
 
-    // Step 5: Check whether an image fails to load
+    // Check whether an image fails to load
 
     galleryImage.addEventListener("error", function() {
 
@@ -202,13 +241,13 @@ if (galleryImage && nextButton && photoCounter) {
             "Image could not be loaded: " + images[currentIndex]
         );
 
-        photoCounter.textContent =
-            "Unable to load photo " + (currentIndex + 1);
+        photoDescription.textContent =
+            "Sorry, this photo could not be loaded.";
 
     });
 
 
-    // Step 6: Add the Next Photo click event
+    // Add the Next Photo button event
 
     nextButton.addEventListener("click", function() {
 
@@ -227,8 +266,33 @@ if (galleryImage && nextButton && photoCounter) {
     });
 
 
-    // Step 7: Display the first image
+    // Display the first image when the page loads
 
     showPhoto();
+
+}
+
+
+/* ========================================
+   CONTACT FORM
+   FRONT-END CONFIRMATION
+======================================== */
+
+const contactForm = document.getElementById("contact-form");
+
+const formMessage = document.getElementById("form-message");
+
+if (contactForm && formMessage) {
+
+    contactForm.addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        formMessage.textContent =
+            "Thank you! Your message form was submitted successfully.";
+
+        contactForm.reset();
+
+    });
 
 }
